@@ -1,4 +1,4 @@
-package throttler_test
+package throttle_test
 
 import (
 	"testing"

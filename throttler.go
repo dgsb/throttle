@@ -1,5 +1,5 @@
-// package throttler implements throttling on Runner interface.
-package throttler
+// package throttle implements throttling on Runner interface.
+package throttle
 
 import (
 	"container/ring"
