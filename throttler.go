@@ -40,7 +40,11 @@ func (t *Throttler) Throttle() {
 		time.Sleep(
 			t.r.Next().Value.(*time.Time).Add(t.period).Sub(time.Now()))
 	}
-	now := time.Now()
 	t.r = t.r.Next()
+	t.UpdateTimestamp()
+}
+
+func (t *Throttler) UpdateTimestamp() {
+	now := time.Now()
 	t.r.Value = &now
 }
